@@ -1,0 +1,24 @@
+
+
+================================================================
+== Synthesis Summary Report of 'loop_pipeline'
+================================================================
++ General Information: 
+    * Date:           Mon Aug  2 08:58:12 2021
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+    * Project:        loop_pipe_prj
+    * Solution:       solution3 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------+------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+    |     Modules     | Issue|       | Latency | Latency | Iteration|         | Trip |          |      |         |           |            |     |
+    |     & Loops     | Type | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |     LUT    | URAM|
+    +-----------------+------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+    |+ loop_pipeline  |    II|  -0.02|       20|  200.000|         -|       10|     -|       yes|     -|  17 (7%)|  2110 (1%)|  8011 (15%)|    -|
+    +-----------------+------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+
