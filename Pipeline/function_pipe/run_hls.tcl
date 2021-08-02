@@ -18,11 +18,11 @@ open_solution -reset "solution1" -flow_target vivado
 set_part {xc7z020clg400-1}
 create_clock -period 10 -name default
 
-# C-simulation
+# C Simulation
 csim_design
-# C-synthesis
+# C Synthesis
 csynth_design
-# C/RTL Co-simulation
+# C/RTL Co-Simulation
 cosim_design -trace_level all
 
 ###########################################################
@@ -36,9 +36,9 @@ create_clock -period 10 -name default
 # Set optimization directives
 set_directive_inline -off "sub_func"
 
-# C-synthesis
+# C Synthesis
 csynth_design
-# C/RTL Co-simulation
+# C/RTL Co-Simulation
 cosim_design -trace_level all
 
 exit
