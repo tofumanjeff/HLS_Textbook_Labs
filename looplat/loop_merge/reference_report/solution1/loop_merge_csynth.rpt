@@ -1,0 +1,175 @@
+
+
+================================================================
+== Vitis HLS Report for 'loop_merge'
+================================================================
+* Date:           Sat Aug  7 21:28:23 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        loop_merge_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.196 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       16|       16|  0.160 us|  0.160 us|   17|   17|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Add     |        6|        6|         3|          1|          1|     5|       yes|
+        |- Sub     |        6|        6|         3|          1|          1|     5|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    124|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    155|    -|
+|Register         |        -|    -|      31|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      31|    279|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |add_ln11_fu_154_p2       |         +|   0|  0|  11|           3|           1|
+    |add_ln15_fu_175_p2       |         +|   0|  0|  39|          32|          32|
+    |add_ln20_fu_182_p2       |         +|   0|  0|  11|           3|           1|
+    |sub_ln24_fu_203_p2       |         -|   0|  0|  39|          32|          32|
+    |icmp_ln11_fu_160_p2      |      icmp|   0|  0|   8|           3|           3|
+    |icmp_ln20_fu_188_p2      |      icmp|   0|  0|   8|           3|           3|
+    |ap_enable_pp0            |       xor|   0|  0|   2|           1|           2|
+    |ap_enable_pp1            |       xor|   0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1  |       xor|   0|  0|   2|           2|           1|
+    |ap_enable_reg_pp1_iter1  |       xor|   0|  0|   2|           2|           1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0| 124|          82|          78|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |a_address0               |  14|          3|    3|          9|
+    |a_d0                     |  14|          3|   32|         96|
+    |ap_NS_fsm                |  31|          6|    1|          6|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |ap_enable_reg_pp1_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp1_iter2  |   9|          2|    1|          2|
+    |b_address0               |  14|          3|    3|          9|
+    |c_address0               |  14|          3|    3|          9|
+    |d_address0               |  14|          3|    3|          9|
+    |i_1_reg_143              |   9|          2|    3|          6|
+    |i_reg_132                |   9|          2|    3|          6|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 155|         33|   55|        158|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------+---+----+-----+-----------+
+    |              Name              | FF| LUT| Bits| Const Bits|
+    +--------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                       |  5|   0|    5|          0|
+    |ap_enable_reg_pp0_iter0         |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1         |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2         |  1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter0         |  1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter1         |  1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter2         |  1|   0|    1|          0|
+    |i_1_cast_reg_254                |  3|   0|   64|         61|
+    |i_1_cast_reg_254_pp1_iter1_reg  |  3|   0|   64|         61|
+    |i_1_reg_143                     |  3|   0|    3|          0|
+    |i_cast_reg_219                  |  3|   0|   64|         61|
+    |i_cast_reg_219_pp0_iter1_reg    |  3|   0|   64|         61|
+    |i_reg_132                       |  3|   0|    3|          0|
+    |trunc_ln13_reg_231              |  1|   0|    1|          0|
+    |trunc_ln22_reg_266              |  1|   0|    1|          0|
+    +--------------------------------+---+----+-----+-----------+
+    |Total                           | 31|   0|  275|        244|
+    +--------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------+-----+-----+------------+--------------+--------------+
+|  RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------+-----+-----+------------+--------------+--------------+
+|ap_clk      |   in|    1|  ap_ctrl_hs|    loop_merge|  return value|
+|ap_rst      |   in|    1|  ap_ctrl_hs|    loop_merge|  return value|
+|ap_start    |   in|    1|  ap_ctrl_hs|    loop_merge|  return value|
+|ap_done     |  out|    1|  ap_ctrl_hs|    loop_merge|  return value|
+|ap_idle     |  out|    1|  ap_ctrl_hs|    loop_merge|  return value|
+|ap_ready    |  out|    1|  ap_ctrl_hs|    loop_merge|  return value|
+|a_address0  |  out|    3|   ap_memory|             a|         array|
+|a_ce0       |  out|    1|   ap_memory|             a|         array|
+|a_we0       |  out|    1|   ap_memory|             a|         array|
+|a_d0        |  out|   32|   ap_memory|             a|         array|
+|b_address0  |  out|    3|   ap_memory|             b|         array|
+|b_ce0       |  out|    1|   ap_memory|             b|         array|
+|b_q0        |   in|   32|   ap_memory|             b|         array|
+|c_address0  |  out|    3|   ap_memory|             c|         array|
+|c_ce0       |  out|    1|   ap_memory|             c|         array|
+|c_q0        |   in|   32|   ap_memory|             c|         array|
+|d_address0  |  out|    3|   ap_memory|             d|         array|
+|d_ce0       |  out|    1|   ap_memory|             d|         array|
+|d_q0        |   in|    8|   ap_memory|             d|         array|
++------------+-----+-----+------------+--------------+--------------+
+

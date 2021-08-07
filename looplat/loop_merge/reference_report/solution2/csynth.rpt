@@ -1,0 +1,25 @@
+
+
+================================================================
+== Synthesis Summary Report of 'loop_merge'
+================================================================
++ General Information: 
+    * Date:           Sat Aug  7 21:30:03 2021
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+    * Project:        loop_merge_prj
+    * Solution:       solution2 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------+------+-------+---------+--------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    |    Modules   | Issue|       | Latency | Latency| Iteration|         | Trip |          |      |    |          |           |     |
+    |    & Loops   | Type | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF    |    LUT    | URAM|
+    +--------------+------+-------+---------+--------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    |+ loop_merge  |     -|  -0.10|        8|  80.000|         -|        9|     -|        no|     -|   -|  16 (~0%)|  206 (~0%)|    -|
+    | o Add        |     -|  -7.30|        6|  60.000|         3|        1|     5|       yes|     -|   -|         -|          -|    -|
+    +--------------+------+-------+---------+--------+----------+---------+------+----------+------+----+----------+-----------+-----+
+
