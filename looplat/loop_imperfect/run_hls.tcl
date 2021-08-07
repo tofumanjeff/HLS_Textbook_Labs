@@ -24,6 +24,8 @@ create_clock -period 10 -name default
 
 close_project
 
+######################################################
+
 # Create a project
 open_project -reset loop_perfect_prj
 
