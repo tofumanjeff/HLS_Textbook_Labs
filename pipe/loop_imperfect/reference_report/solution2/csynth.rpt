@@ -1,13 +1,13 @@
 
 
 ================================================================
-== Synthesis Summary Report of 'loop_imperfect'
+== Synthesis Summary Report of 'loop_perfect'
 ================================================================
 + General Information: 
-    * Date:           Fri Aug  6 22:07:31 2021
+    * Date:           Fri Aug 13 20:05:56 2021
     * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
     * Project:        loop_imperfect_prj
-    * Solution:       solution1 (Vivado IP Flow Target)
+    * Solution:       solution2 (Vivado IP Flow Target)
     * Product family: zynq
     * Target device:  xc7z020-clg400-1
     
@@ -19,8 +19,7 @@
     |      Modules     | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |      |         |           |           |     |
     |      & Loops     | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
     +------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
-    |+ loop_imperfect  |     -|  -3.10|      601|  6.010e+03|         -|      602|     -|        no|     -|  2 (~0%)|  129 (~0%)|  277 (~0%)|    -|
-    | o LOOP_I         |     -|  -7.30|      600|  6.000e+03|        30|        -|    20|        no|     -|        -|          -|          -|    -|
-    |  o LOOP_J        |     -|  -7.30|       23|    230.000|         5|        1|    20|       yes|     -|        -|          -|          -|    -|
+    |+ loop_perfect    |     -|  -2.40|      409|  4.090e+03|         -|      410|     -|        no|     -|  2 (~0%)|  518 (~0%)|  497 (~0%)|    -|
+    | o LOOP_I_LOOP_J  |     -|  -7.30|      407|  4.070e+03|         9|        1|   400|       yes|     -|        -|          -|          -|    -|
     +------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
 

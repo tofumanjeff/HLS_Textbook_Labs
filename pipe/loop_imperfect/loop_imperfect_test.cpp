@@ -15,6 +15,7 @@
  */
 
 #include "loop_imperfect.h"
+#include "loop_perfect.h"
 
 int main() {
     din_t A[N];
@@ -32,6 +33,7 @@ int main() {
 
     // Call the function
     loop_imperfect(A, B);
+    //loop_perfect(A, B);
     for (i = 0; i < N; ++i) {
       FILE << B[i] << endl;
     }

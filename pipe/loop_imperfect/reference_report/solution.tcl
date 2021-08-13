@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: BSD-3-Clause       #
 ###############################################
 
-# loop_imperfect
+# solution1
 set_directive_pipeline "loop_imperfect/LOOP_J"
 
-# loop_perfect
+# solution2
 set_directive_pipeline "loop_perfect/LOOP_J"

@@ -3,11 +3,11 @@
 ================================================================
 == Vitis HLS Report for 'loop_perfect'
 ================================================================
-* Date:           Fri Aug  6 22:06:20 2021
+* Date:           Fri Aug 13 20:05:56 2021
 
 * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
-* Project:        loop_perfect_prj
-* Solution:       solution1 (Vivado IP Flow Target)
+* Project:        loop_imperfect_prj
+* Solution:       solution2 (Vivado IP Flow Target)
 * Product family: zynq
 * Target device:  xc7z020-clg400-1
 
