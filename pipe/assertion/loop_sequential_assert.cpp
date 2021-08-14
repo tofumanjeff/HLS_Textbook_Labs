@@ -22,13 +22,13 @@ void loop_sequential_assert(din_t A[N], din_t B[N], dout_t X[N], dout_t Y[N], ds
   dout_t Y_accum=0;
   int i,j;
 
-  assert(xlimit<32);
+  //assert(xlimit<32);
   SUM_X:for (i=0;i<=xlimit; i++) {
       X_accum += A[i];
       X[i] = X_accum;
   }
 
-  assert(ylimit<16);
+  //assert(ylimit<16);
   SUM_Y:for (i=0;i<=ylimit; i++) {
       Y_accum += B[i];
       Y[i] = Y_accum;
