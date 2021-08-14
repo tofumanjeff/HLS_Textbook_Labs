@@ -1,0 +1,26 @@
+
+
+================================================================
+== Synthesis Summary Report of 'loop_sequential_assert'
+================================================================
++ General Information: 
+    * Date:           Sat Aug 14 18:06:08 2021
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+    * Project:        assertion_prj
+    * Solution:       solution2 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    |          Modules         | Issue|       | Latency | Latency | Iteration|         | Trip |          |      |    |          |           |     |
+    |          & Loops         | Type | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF    |    LUT    | URAM|
+    +--------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    |+ loop_sequential_assert  |     -|  -0.98|       52|  520.000|         -|       53|     -|        no|     -|   -|  69 (~0%)|  202 (~0%)|    -|
+    | o SUM_X                  |     -|  -7.30|       32|  320.000|         2|        1|    32|       yes|     -|   -|         -|          -|    -|
+    | o SUM_Y                  |     -|  -7.30|       16|  160.000|         2|        1|    16|       yes|     -|   -|         -|          -|    -|
+    +--------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----+----------+-----------+-----+
+
