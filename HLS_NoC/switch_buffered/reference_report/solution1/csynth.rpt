@@ -1,0 +1,25 @@
+
+
+================================================================
+== Synthesis Summary Report of 'switch_buffered'
+================================================================
++ General Information: 
+    * Date:           Sat Sep  4 22:06:47 2021
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+    * Project:        switch_buffered_prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |              Modules             |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |              & Loops             |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +----------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ switch_buffered                 |  Timing|   5.01|        0|   0.000|         -|        1|     -|        no|     -|   -|  324 (~0%)|   736 (1%)|    -|
+    | + call_ret_switch_2stage_fu_160  |       -|  -0.82|        0|   0.000|         -|        0|     -|        no|     -|   -|  187 (~0%)|  518 (~0%)|    -|
+    +----------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
